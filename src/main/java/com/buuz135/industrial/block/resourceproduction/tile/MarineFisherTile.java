@@ -70,7 +70,7 @@ public class MarineFisherTile extends IndustrialAreaWorkingTile<MarineFisherTile
     @Override
     public WorkAction work() {
         if (hasEnergy(powerPerOperation)) {
-            if (getWaterSources() < 9) return new WorkAction(1, 0);
+            if (getWaterSources() < 25) return new WorkAction(1, 0);
             LootTable fishingTable = this.level.getServer().getLootData().getLootTable(BuiltInLootTables.FISHING);
             if (this.level.random.nextDouble() <= 0.02) {
                 fishingTable = this.level.getServer().getLootData().getLootTable(BuiltInLootTables.FISHING_TREASURE);
